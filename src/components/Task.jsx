@@ -1,14 +1,18 @@
-export const TaskCard = (props) => {
+export const Task = (props) => {
 
-    const {name, completed} = props;
+    const {name, isChecked, onChecked} = props;
+
+    const handleCheckboxChange = () => {
+      onChecked(name);
+    }
 
     return (
         <li>
             <article>
                 <h4>{name}</h4>
-                <input type="checkbox" checked={completed} />
-                <button>Edit</button>
-                <button>Delete</button>
+                <label>
+                  <button onClick={handleCheckboxChange}> {isChecked ? "✅" : "◯"}</button>
+                </label>
             </article>
         </li>
     );

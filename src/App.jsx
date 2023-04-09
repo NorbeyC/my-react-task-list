@@ -9,11 +9,12 @@ const Tasks = [
 ];
 
 function App() {
-  return (<div className="App"> 
-    <Header />
-    <TaskList list={Tasks}/>
-  </div>)
-  
+  return (
+    <div className="App"> 
+      <Header />
+      <TaskList list={Tasks}/>
+    </div>
+  );
 }
 
 export default App
